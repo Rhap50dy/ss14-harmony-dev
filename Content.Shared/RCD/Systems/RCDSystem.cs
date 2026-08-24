@@ -210,6 +210,53 @@ public sealed partial class RCDSystem : EntitySystem
                 break;
         }
 
+        // Copy + pasting this section but it looks at elite rcd decon component instead because idk c# well enough to do it better
+
+        switch (prototype.Mode)
+        {
+            case RcdMode.Deconstruct:
+
+                // Deconstructing an object
+                if (args.Target != null)
+                {
+                    if (TryComp<EliteRCDDeconstructableComponent>(args.Target, out var destructible))
+                    {
+                        cost = destructible.Cost;
+                        delay = destructible.Delay;
+                        effectPrototype = destructible.Effect;
+                    }
+                }
+
+                // Deconstructing a tile
+                else
+                {
+                    var deconstructedTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
+                    var protoName = !_turf.IsSpace(deconstructedTile) ? _deconstructTileProto : _deconstructLatticeProto;
+
+                    if (ProtoMan.Resolve(protoName, out var deconProto))
+                    {
+                        cost = deconProto.Cost;
+                        delay = deconProto.Delay;
+                        effectPrototype = deconProto.Effect;
+                    }
+                }
+
+                break;
+
+            case RcdMode.ConstructTile:
+
+                // If replacing a tile, make the construction instant
+                var contructedTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
+
+                if (!contructedTile.Tile.IsEmpty)
+                {
+                    delay = _instantConstructionDelay;
+                    effectPrototype = _instantConstructionFx;
+                }
+
+                break;
+        }
+
         #endregion
 
         // Try to start the do after

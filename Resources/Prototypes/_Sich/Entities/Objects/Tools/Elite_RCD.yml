@@ -14,7 +14,7 @@
   - type: Clothing
     sprite: _Sich/Objects/Tools/ellite_rcd.rsi
   - type: LimitedCharges
-    maxCharges: 40
+    maxCharges: 60
   - type: StealTarget
     stealGroup: RCDElite
   - type: RCD

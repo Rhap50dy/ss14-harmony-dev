@@ -1,7 +1,7 @@
 # Harmony change
 - type: entity
   parent: EffectRCDBase
-  id: EffectRCDConstruct4
+  id: EffectEliteRCDConstruct1
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite

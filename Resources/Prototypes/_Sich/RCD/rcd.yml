@@ -87,7 +87,7 @@
   delay: 10
   collisionMask: Impassable
   rotation: Camera
-  fx: EffectRCDConstruct4
+  fx: EffectEliteRCDConstruct1
 
 - type: rcd
   id: WallReinforcedDiagonal
@@ -99,4 +99,4 @@
   delay: 10
   collisionMask: Impassable
   rotation: Camera
-  fx: EffectRCDConstruct4
+  fx: EffectEliteRCDConstruct1
