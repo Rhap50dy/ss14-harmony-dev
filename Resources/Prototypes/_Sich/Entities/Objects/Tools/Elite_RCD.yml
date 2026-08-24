@@ -44,3 +44,7 @@
     - HVCable
     - CableTerminal
     - Deconstruct
+    # Harmony
+    - WallReinforced
+    - WallReinforcedDiagonal
+    # End harmony

@@ -73,3 +73,30 @@
   collisionMask: Impassable
   rotation: Camera
   fx: EffectRCDConstruct4
+
+# Harmony change
+#Walls
+
+- type: rcd
+  id: WallReinforced
+  category: WallsAndFlooring
+  sprite: /Textures/_Sich/Interface/Radial/RCD/wall_reinforced.png
+  mode: ConstructObject
+  prototype: WallReinforced
+  cost: 12
+  delay: 10
+  collisionMask: Impassable
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: WallReinforcedDiagonal
+  category: WallsAndFlooring
+  sprite: /Textures/_Sich/Interface/Radial/RCD/wall_reinforced_diagonal.png
+  mode: ConstructObject
+  prototype: WallReinforcedDiagonal
+  cost: 12
+  delay: 10
+  collisionMask: Impassable
+  rotation: Camera
+  fx: EffectRCDConstruct4

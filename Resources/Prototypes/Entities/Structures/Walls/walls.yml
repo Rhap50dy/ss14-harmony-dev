@@ -635,6 +635,12 @@
     damageModifierSet: StructuralMetallicStrong
   - type: Injurable
     damageContainer: StructuralInorganic
+# Start of Harmony Change: Adds EliteRCDDeconstructable component
+  - type: EliteRCDDeconstructable
+    cost: 10
+    delay: 15
+    fx: EffectRCDDeconstruct10
+# End Harmony
   - type: Destructible
     thresholds:
     - trigger:
@@ -738,6 +744,12 @@
     sprite: _Harmony/Structures/Walls/reinforced_diagonal.rsi
 # End of Harmony Change
     state: state0
+# Start of Harmony Change: Adds EliteRCDDeconstructable component
+  - type: EliteRCDDeconstructable
+    cost: 10
+    delay: 15
+    fx: EffectRCDDeconstruct10
+# End Harmony
   - type: Damageable
     damageModifierSet: StructuralMetallicStrong
   - type: Injurable

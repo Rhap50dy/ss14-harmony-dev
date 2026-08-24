@@ -1,3 +1,16 @@
+# Harmony change
+- type: entity
+  parent: EffectRCDBase
+  id: EffectRCDConstruct4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: /Textures/_Sich/Effects/rcd.rsi
+    state: construct4
+  - type: TimedDespawn
+    lifetime: 10
+# End harmony
+
 - type: entity
   parent: EffectRCDBase
   id: EffectRCDConstruct5
@@ -8,7 +21,7 @@
     state: construct5
   - type: TimedDespawn
     lifetime: 15
-    
+
 - type: entity
   parent: EffectRCDBase
   id: EffectRCDConstruct6
